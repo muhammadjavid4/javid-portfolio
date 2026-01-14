@@ -25,7 +25,7 @@ const educationData = [
   },
   {
     degree: "Secondary School Certificate (SSC)",
-    institution: "Board of Secondary Education, Telangana",
+    institution: "ZPHS Enubamula, Telangana",
     duration: "2018",
     Grade: "9.7 CGPA",
     details: [
