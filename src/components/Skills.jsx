@@ -12,6 +12,9 @@ import {
     FaGithub,
     FaJava,
     FaPython,
+    FaWindows, 
+    FaLinux, 
+    FaApple,
 } from "react-icons/fa6";
 import {
     SiTailwindcss,
@@ -124,6 +127,11 @@ export default function Skills() {
                         <Skill icon={<FaCode />} name="Arrays, Strings, Recursion" />
                         <Skill icon={<FaCode />} name="Linked List, Stack, Queue" />
                         <Skill icon={<FaCode />} name="Trees, Graphs, Hashing" />
+                    </SkillCard>
+                    <SkillCard title="Operating Systems">
+                        <Skill icon={<FaWindows />} name="Windows" />
+                        <Skill icon={<FaLinux />} name="Linux" />
+                        <Skill icon={<FaApple />} name="macOS" />
                     </SkillCard>
                 </motion.div>
             </div>
