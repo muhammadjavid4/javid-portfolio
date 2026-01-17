@@ -25,7 +25,7 @@ among users.
       "Secure REST APIs",
     ],
     github: "https://github.com/muhammadjavid4/splitwise-fullstack",
-    live: "",
+    live: "https://splitwise-fullstack.vercel.app",
   },
 
   {
