@@ -1,0 +1,301 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   THEME SYSTEM
+   Every color in the app is driven by these CSS variables. Switching
+   [data-theme] and the .light class is enough to re-skin the entire site —
+   no component classNames need to change.
+   ========================================================================== */
+
+:root {
+  color-scheme: dark;
+}
+
+/* ---------- Terminal Amber (default) ---------- */
+html[data-theme="amber"] {
+  --ink: 20 18 15;
+  --ink-soft: 27 24 20;
+  --ink-softer: 34 30 24;
+  --paper: 241 236 224;
+  --paper-dim: 201 195 180;
+  --accent: 232 163 61;
+  --accent-soft: 243 199 132;
+  --accent2: 127 163 122;
+  --accent2-soft: 169 197 165;
+  --danger: 200 89 59;
+  --line: 241 236 224;
+}
+html[data-theme="amber"].light {
+  color-scheme: light;
+  --ink: 250 247 240;
+  --ink-soft: 242 237 227;
+  --ink-softer: 232 224 208;
+  --paper: 34 28 20;
+  --paper-dim: 96 86 68;
+  --accent: 179 108 24;
+  --accent-soft: 232 163 61;
+  --accent2: 62 107 58;
+  --accent2-soft: 127 163 122;
+  --danger: 176 62 38;
+  --line: 34 28 20;
+}
+
+/* ---------- Ocean Blue ---------- */
+html[data-theme="ocean"] {
+  --ink: 8 14 22;
+  --ink-soft: 14 22 34;
+  --ink-softer: 20 31 46;
+  --paper: 226 236 245;
+  --paper-dim: 158 176 196;
+  --accent: 56 161 224;
+  --accent-soft: 125 199 240;
+  --accent2: 45 212 191;
+  --accent2-soft: 110 231 217;
+  --danger: 224 90 90;
+  --line: 226 236 245;
+}
+html[data-theme="ocean"].light {
+  color-scheme: light;
+  --ink: 246 250 253;
+  --ink-soft: 235 242 248;
+  --ink-softer: 220 231 240;
+  --paper: 15 26 38;
+  --paper-dim: 78 96 114;
+  --accent: 15 111 168;
+  --accent-soft: 56 161 224;
+  --accent2: 13 130 116;
+  --accent2-soft: 45 212 191;
+  --danger: 191 54 54;
+  --line: 15 26 38;
+}
+
+/* ---------- Violet Nights ---------- */
+html[data-theme="violet"] {
+  --ink: 16 12 24;
+  --ink-soft: 24 18 34;
+  --ink-softer: 33 25 46;
+  --paper: 235 228 245;
+  --paper-dim: 175 163 196;
+  --accent: 168 121 235;
+  --accent-soft: 202 171 245;
+  --accent2: 236 114 178;
+  --accent2-soft: 244 163 200;
+  --danger: 224 90 120;
+  --line: 235 228 245;
+}
+html[data-theme="violet"].light {
+  color-scheme: light;
+  --ink: 250 248 253;
+  --ink-soft: 241 235 249;
+  --ink-softer: 229 219 242;
+  --paper: 30 20 42;
+  --paper-dim: 92 78 112;
+  --accent: 122 66 199;
+  --accent-soft: 168 121 235;
+  --accent2: 199 55 128;
+  --accent2-soft: 236 114 178;
+  --danger: 191 54 90;
+  --line: 30 20 42;
+}
+
+/* ---------- Emerald Code ---------- */
+html[data-theme="emerald"] {
+  --ink: 8 18 14;
+  --ink-soft: 14 27 21;
+  --ink-softer: 20 37 29;
+  --paper: 224 241 232;
+  --paper-dim: 160 196 178;
+  --accent: 52 199 128;
+  --accent-soft: 120 224 173;
+  --accent2: 94 194 224;
+  --accent2-soft: 150 220 240;
+  --danger: 224 110 74;
+  --line: 224 241 232;
+}
+html[data-theme="emerald"].light {
+  color-scheme: light;
+  --ink: 246 253 249;
+  --ink-soft: 234 246 239;
+  --ink-softer: 219 238 227;
+  --paper: 14 32 24;
+  --paper-dim: 74 102 88;
+  --accent: 20 148 92;
+  --accent-soft: 52 199 128;
+  --accent2: 25 128 158;
+  --accent2-soft: 94 194 224;
+  --danger: 191 76 46;
+  --line: 14 32 24;
+}
+
+/* ---------- Crimson Editor ---------- */
+html[data-theme="crimson"] {
+  --ink: 20 12 12;
+  --ink-soft: 29 18 18;
+  --ink-softer: 38 24 24;
+  --paper: 245 230 225;
+  --paper-dim: 199 168 160;
+  --accent: 224 84 84;
+  --accent-soft: 240 140 130;
+  --accent2: 230 176 84;
+  --accent2-soft: 240 200 130;
+  --danger: 199 42 42;
+  --line: 245 230 225;
+}
+html[data-theme="crimson"].light {
+  color-scheme: light;
+  --ink: 253 247 245;
+  --ink-soft: 246 234 231;
+  --ink-softer: 237 219 213;
+  --paper: 40 18 16;
+  --paper-dim: 110 74 68;
+  --accent: 191 46 46;
+  --accent-soft: 224 84 84;
+  --accent2: 168 118 20;
+  --accent2-soft: 230 176 84;
+  --danger: 168 30 30;
+  --line: 40 18 16;
+}
+
+/* ---------- Mono Pro ---------- */
+html[data-theme="mono"] {
+  --ink: 15 15 16;
+  --ink-soft: 22 22 24;
+  --ink-softer: 30 30 33;
+  --paper: 235 235 238;
+  --paper-dim: 168 168 176;
+  --accent: 138 180 255;
+  --accent-soft: 180 205 255;
+  --accent2: 200 200 208;
+  --accent2-soft: 220 220 226;
+  --danger: 224 90 90;
+  --line: 235 235 238;
+}
+html[data-theme="mono"].light {
+  color-scheme: light;
+  --ink: 250 250 251;
+  --ink-soft: 241 241 243;
+  --ink-softer: 228 228 232;
+  --paper: 20 20 22;
+  --paper-dim: 96 96 104;
+  --accent: 30 90 199;
+  --accent-soft: 138 180 255;
+  --accent2: 90 90 100;
+  --accent2-soft: 140 140 150;
+  --danger: 191 54 54;
+  --line: 20 20 22;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* keeps anchor-scrolled sections from landing underneath the fixed navbar */
+    scroll-padding-top: 6.5rem;
+  }
+
+  body {
+    @apply bg-ink text-paper font-sans antialiased;
+    overflow-x: hidden;
+    transition: background-color 0.35s ease, color 0.35s ease;
+  }
+
+  ::selection {
+    background-color: rgb(var(--accent));
+    color: rgb(var(--ink));
+  }
+
+  /* thin, quiet scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgb(var(--ink));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--ink-softer));
+    border-radius: 999px;
+    border: 2px solid rgb(var(--ink));
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--accent) / 0.4);
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--accent));
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* editor-tab underline indicator */
+  .tab-indicator {
+    box-shadow: inset 0 -2px 0 0 rgb(var(--accent));
+  }
+
+  /* dotted-grid background, tinted by theme */
+  .bg-grid-pattern {
+    background-image:
+      linear-gradient(rgb(var(--line) / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(var(--line) / 0.06) 1px, transparent 1px);
+    background-size: 36px 36px;
+  }
+
+  /* vignette so the grid doesn't feel like a stock template */
+  .bg-fade-vignette::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 15%, rgb(var(--ink)) 80%);
+  }
+
+  /* soft ambient accent glow blobs used behind hero/sections */
+  .ambient-blob {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(90px);
+    pointer-events: none;
+    opacity: 0.35;
+  }
+
+  /* frosted glass panel for the theme switcher */
+  .glass-panel {
+    background: rgb(var(--ink-soft) / 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 7s ease-in-out infinite;
+  }
+  .animate-float-slow {
+    animation: float 11s ease-in-out infinite;
+  }
+  .animate-gradient-shift {
+    background-size: 200% 200%;
+    animation: gradient-shift 12s ease infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(0, -22px); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
